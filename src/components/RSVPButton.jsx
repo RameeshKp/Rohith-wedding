@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { MessageCircleHeart } from "lucide-react";
 
-function RSVPButton() {
-  const whatsappLink =
-    "https://wa.me/?text=We%20would%20love%20to%20join%20the%20wedding%20celebration%20of%20Rohith%20and%20Shibitha";
+function RSVPButton({ number }) {
+  const message = encodeURIComponent(
+    "നിങ്ങളുടെ ജീവിതയാത്ര സന്തോഷവും സ്നേഹവും നിറഞ്ഞതാകട്ടെ. ആശംസകൾ!",
+  );
+  const whatsappLink = `https://wa.me/${number}?text=${message}`;
 
   return (
     <motion.div
@@ -20,6 +22,9 @@ function RSVPButton() {
       <p className="mt-3 text-[15px] leading-7 text-[var(--color-muted)]">
         Tap below to open WhatsApp and share your love, blessings, and
         attendance.
+      </p>
+      <p className="mt-2 text-sm font-medium text-[var(--color-primary)]">
+        WhatsApp: +91 99461 80123
       </p>
 
       <motion.a

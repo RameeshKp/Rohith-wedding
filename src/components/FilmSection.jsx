@@ -10,7 +10,7 @@ const reveal = {
   },
 };
 
-function FilmSection({ src }) {
+function FilmSection({ videos }) {
   return (
     <motion.div
       variants={reveal}
@@ -28,16 +28,26 @@ function FilmSection({ src }) {
         </div>
       </div>
 
-      <div className="overflow-hidden rounded-[1.75rem] border border-white/70 bg-[#0f1714]">
-        <video
-          className="aspect-[9/16] w-full bg-black object-cover"
-          src={src}
-          controls
-          muted
-          loop
-          playsInline
-          preload="metadata"
-        />
+      <div className="grid gap-4 sm:grid-cols-2">
+        {videos.map((src, index) => (
+          <div
+            key={src}
+            className="overflow-hidden rounded-[1.75rem] border border-white/70 bg-[#0f1714]"
+          >
+            <video
+              className="aspect-[9/16] w-full bg-black object-cover"
+              src={src}
+              controls
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            />
+            <div className="border-t border-white/10 px-4 py-3 text-sm font-medium text-white/80">
+              {index === 0 ? "Film One" : "Film Two"}
+            </div>
+          </div>
+        ))}
       </div>
     </motion.div>
   );

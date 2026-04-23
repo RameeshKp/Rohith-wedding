@@ -66,6 +66,9 @@ const galleryPhotos = [
   "/media/couple/photo-10.jpg",
   "/media/couple/photo-12.jpg",
   "/media/couple/photo-13.jpg",
+  "/media/couple/photo-14.jpeg",
+  "/media/couple/photo-15.jpeg",
+  "/media/couple/photo-16.jpeg",
 ];
 
 const eventDetails = [
@@ -92,7 +95,7 @@ function App() {
     index: null,
   });
 
-  const invitationImage = "/media/save-the-date/save-the-date-cover.jpg";
+  const invitationImage = "/media/couple/photo-16.jpeg";
 
   const galleryItems = useMemo(
     () =>
@@ -219,7 +222,12 @@ function App() {
             </div>
 
             <div className="flex flex-col gap-6">
-              <FilmSection src="/media/video/couple-film.mp4" />
+              <FilmSection
+                videos={[
+                  "/media/video/couple-film.mp4",
+                  "/media/video/couple-film-1.mp4",
+                ]}
+              />
 
               <div className="glass-panel rounded-[2rem] p-6">
                 <p className="section-kicker">Open Invite</p>
@@ -249,7 +257,7 @@ function App() {
                 </div>
               </div>
 
-              <RSVPButton />
+              <RSVPButton number="919946180123" />
             </div>
           </div>
         </motion.section>

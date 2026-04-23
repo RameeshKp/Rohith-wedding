@@ -119,7 +119,7 @@ function Hero({ onOpenInvitation }) {
               </p>
             </div>
             <div className="mt-3 text-sm font-semibold text-[var(--color-gold)] sm:mt-0">
-              April 25-26, 2026
+              Sunday, April 26, 2026
             </div>
           </div>
         </motion.div>
