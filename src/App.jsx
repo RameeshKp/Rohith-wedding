@@ -76,7 +76,7 @@ const eventDetails = [
     title: "Reception",
     venue: "Evento Convention Centre, Athani, Vaniyambalam",
     time: "5:00 PM - 8:30 PM",
-    date: "Saturday, April 25, 2026",
+    date: "Saturday, April 26, 2026",
     mapQuery: "Evento Convention Centre Athani Vaniyambalam",
   },
   {
